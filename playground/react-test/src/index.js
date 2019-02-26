@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render(
-  <App 
-    onChange={function() {}}
-  />,
+  <Provider store={store}>
+    <App
+      onChange={function () { }}
+    />
+  </Provider>,
   document.getElementById('root')
 );
+

@@ -1,10 +1,12 @@
 import React from 'react';
+import { addTodo } from '../store/action';
+import { connect } from 'react-redux';
 
 // Contract
 // This component will call the prop `onAddTodo` 
 // when a valid todo is added
 
-export default class AddTodoBox extends React.Component {
+export class AddTodoBox extends React.Component {
   state = {
     text: '',
     error: false
@@ -45,3 +47,12 @@ export default class AddTodoBox extends React.Component {
     )
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  onAddTodo: (todoText) => {
+    const action = addTodo(todoText)
+    dispatch(action);
+  }
+});
+
+export default connect(null, mapDispatchToProps)(AddTodoBox);

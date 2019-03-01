@@ -17,4 +17,20 @@ const mapStateToProps = (state) => ({
   todoCount: state.todos.length
 });
 
+const mapDispatchToProps = (dispatch) => {
+   addTodo: dispatch({type: '1234'})
+ }
+
 export default connect(mapStateToProps)(Header);
+
+function sum(b, a){ return a + b;}
+
+var result = connect(Header)
+
+// STORE
+//   - STATE     // Data
+//   - DISPATCH  // A way to change the data (dispatch actions)
+
+// Store
+// - mapStateToProps = function()
+//

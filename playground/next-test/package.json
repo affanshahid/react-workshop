@@ -5,8 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "next": "^8.0.3",
+    "next-redux-wrapper": "^3.0.0-alpha.1",
     "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "react-dom": "^16.8.3",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8"
   },
   "devDependencies": {},
   "scripts": {
